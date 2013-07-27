@@ -4,6 +4,7 @@ describe "User" do
   context "when he leaves a valid email" do
     it "see a success message" do
       visit "/landing_page/"
+      fill_in 'Name', with: 'Name'
       fill_in 'Email', with: 'dummy@email.com'
       click_button 'Subscribe'
       expect(page).to have_selector '.message.message-success', text: 'You have been subscribed'

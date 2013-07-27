@@ -11,12 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130727104115) do
+ActiveRecord::Schema.define(version: 20130727152153) do
 
   create_table "landing_page_users", force: true do |t|
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
   add_index "landing_page_users", ["email"], name: "index_landing_page_users_on_email", unique: true

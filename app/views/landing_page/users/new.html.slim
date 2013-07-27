@@ -1,4 +1,6 @@
 = form_for :user, url: {action: :create} do |f|
+  = label_tag :user_name, t('name')
+  = f.text_field :name
   = label_tag :user_email, t('email')
   = f.text_field :email
   = f.submit t('subscribe')

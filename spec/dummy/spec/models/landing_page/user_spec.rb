@@ -11,5 +11,8 @@ module LandingPage
         expect(User.new).to_not allow_value("invalid_email").for(:email)
       end
     end
+    it "has name attribute" do
+      expect(User.new).to respond_to :name
+    end
   end
 end
