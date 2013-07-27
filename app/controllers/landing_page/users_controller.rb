@@ -7,7 +7,8 @@ module LandingPage
       params.require(:user).permit!
       user = User.new(params[:user])
       if user.valid?
-        flash[:success] = t('subscribed')
+        user.save
+        flash.now[:success] = t('subscribed')
         render :new
       else
         @errors = user.errors

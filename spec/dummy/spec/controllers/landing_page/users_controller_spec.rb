@@ -13,6 +13,9 @@ module LandingPage
         it "flash a success message" do
           expect(flash[:success]).to_not be_nil
         end
+        it "save the record" do
+          expect(User.count()).to eq(1)
+        end
       end
       context "when invalid email is given" do
         before :each do
