@@ -18,4 +18,13 @@ describe "User" do
       expect(page).to have_selector '.message.message-error', text: 'The email is not valid'
     end
   end
+  context "when he leaves a repeated email" do
+    it "see an error message" do
+      FactoryGirl.create :user, email: 'dummy@email.com'
+      visit "/landing_page/"
+      fill_in 'Email', with: 'dummy@email.com'
+      click_button 'Subscribe'
+      expect(page).to have_selector '.message.message-error', text: 'The email has already been subscribed'
+    end
+  end
 end
