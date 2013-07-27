@@ -1,0 +1,10 @@
+= form_for :user, url: {action: :create} do |f|
+  = label_tag :user_email, t('email')
+  = f.text_field :email
+  = f.submit t('subscribe')
+
+- if flash[:success]
+  .message.message-success = flash[:success]
+
+- if flash[:error]
+  .message.message-error = flash[:error]
