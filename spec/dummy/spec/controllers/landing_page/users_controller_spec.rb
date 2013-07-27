@@ -21,8 +21,8 @@ module LandingPage
         it "render #new template" do
           expect(response).to render_template :new
         end
-        it "flash an error message" do
-          expect(flash[:error]).to_not be_nil
+        it "assign validation errors" do
+          expect(assigns[:errors]).to_not be_nil
         end
       end
     end

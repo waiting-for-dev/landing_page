@@ -6,7 +6,9 @@
   = f.submit t('subscribe')
 
 - if flash[:success]
-  .message.message-success = flash[:success]
+  p.message.message-success = flash[:success]
 
-- if flash[:error]
-  .message.message-error = flash[:error]
+- if defined? @errors
+  ul.message.message-error
+    - @errors.each do |attr, value|
+      li = value
