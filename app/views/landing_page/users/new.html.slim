@@ -6,9 +6,6 @@
   = f.submit t('landing_page.label_subscribe'), class: 'lp-button'
   p.lp-note = t('landing_page.privacy_message')
 
-- if flash[:success]
-  p.lp-message.lp-message-success = flash[:success]
-
 - if defined? @errors
   ul.lp-message.lp-message-error
     - @errors.each do |attr, value|

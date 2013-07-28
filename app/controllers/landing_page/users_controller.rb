@@ -9,7 +9,7 @@ module LandingPage
       if user.valid?
         user.save
         flash.now[:success] = t('landing_page.subscribed')
-        render :new
+        render :create
       else
         @errors = user.errors
         render :new

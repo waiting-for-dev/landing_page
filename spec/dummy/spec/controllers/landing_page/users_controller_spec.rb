@@ -7,8 +7,8 @@ module LandingPage
         before :each do
           post :create, use_route: 'landing_page', user: {email: 'valid@email.com'}
         end
-        it "render #new template" do
-          expect(response).to render_template :new
+        it "render #create template" do
+          expect(response).to render_template :create
         end
         it "flash a success message" do
           expect(flash[:success]).to_not be_nil

@@ -1,0 +1,6 @@
+- if flash[:success]
+  p.lp-message.lp-message-success = flash[:success]
+
+.lp-share
+  h1.lp-heading =t('heading_share')
+  = render 'share_items'
