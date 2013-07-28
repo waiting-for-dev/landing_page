@@ -1,8 +1,8 @@
 = form_for :user, url: {action: :create}, html: { class: 'landing_page-form' } do |f|
-  = label_tag :user_name, t('name')
-  = f.text_field :name, class: 'landing_page-field'
-  = label_tag :user_email, t('email')
-  = f.text_field :email, class: 'landing_page-field'
+  = label_tag :user_name, t('name'), class: 'landing_page-label'
+  = f.text_field :name, class: 'landing_page-field', placeholder: t('placeholder_name')
+  = label_tag :user_email, t('email'), class: 'landing_page-label'
+  = f.text_field :email, class: 'landing_page-field', placeholder: t('placeholder_email')
   = f.submit t('subscribe'), class: 'landing_page-button'
 
 - if flash[:success]
