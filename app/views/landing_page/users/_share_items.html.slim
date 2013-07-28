@@ -1,3 +1,3 @@
-ul
-  li = link_to 'Facebook', "http://www.facebook.com/sharer.php?u=http://#{request.host_with_port}&t=#{t('landing_page.share_facebook')}"
-  li = link_to 'Twitter', "http://www.twitter.com/share?url=http://#{request.host_with_port}&text=#{t('landing_page.share_twitter', url: 'http://'+request.host_with_port)}"
+ul.lp-share-list
+  li.lp-share-fb = link_to 'Facebook', "http://www.facebook.com/sharer.php?u=http://#{request.host_with_port}&t=#{t('landing_page.share_facebook')}"
+  li.lp-share-tw = link_to 'Twitter', "http://www.twitter.com/share?url=http://#{request.host_with_port}&text=#{t('landing_page.share_twitter', url: 'http://'+request.host_with_port)}"
