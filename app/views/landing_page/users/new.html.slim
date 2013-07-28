@@ -1,9 +1,9 @@
-= form_for :user, url: {action: :create} do |f|
+= form_for :user, url: {action: :create}, html: { class: 'landing_page-form' } do |f|
   = label_tag :user_name, t('name')
-  = f.text_field :name
+  = f.text_field :name, class: 'landing_page-field'
   = label_tag :user_email, t('email')
-  = f.text_field :email
-  = f.submit t('subscribe')
+  = f.text_field :email, class: 'landing_page-field'
+  = f.submit t('subscribe'), class: 'landing_page-button'
 
 - if flash[:success]
   p.message.message-success = flash[:success]
