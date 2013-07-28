@@ -7,7 +7,7 @@ describe "User" do
       fill_in 'Name', with: 'Name'
       fill_in 'Email', with: 'dummy@email.com'
       click_button 'Subscribe'
-      expect(page).to have_selector '.message.message-success', text: 'You have been subscribed'
+      expect(page).to have_selector '.lp-message.lp-message-success', text: 'You have been subscribed'
     end
   end
   context "when he leaves an invalid email" do
@@ -15,7 +15,7 @@ describe "User" do
       visit "/landing_page/"
       fill_in 'Email', with: 'not_valid_email'
       click_button 'Subscribe'
-      expect(page).to have_selector '.message.message-error', text: 'The email is not valid'
+      expect(page).to have_selector '.lp-message.lp-message-error', text: 'The email is not valid'
     end
   end
   context "when he leaves a repeated email" do
@@ -24,7 +24,7 @@ describe "User" do
       visit "/landing_page/"
       fill_in 'Email', with: 'dummy@email.com'
       click_button 'Subscribe'
-      expect(page).to have_selector '.message.message-error', text: 'The email has already been subscribed'
+      expect(page).to have_selector '.lp-message.lp-message-error', text: 'The email has already been subscribed'
     end
   end
 end
