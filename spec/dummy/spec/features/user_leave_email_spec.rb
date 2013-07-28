@@ -1,30 +1,27 @@
 require 'spec_helper'
 
-describe "User" do
-  context "when he leaves a valid email" do
-    it "see a success message" do
-      visit "/landing_page/"
-      fill_in 'Name', with: 'Name'
-      fill_in 'Email', with: 'dummy@email.com'
-      click_button 'Subscribe'
-      expect(page).to have_selector '.lp-message.lp-message-success', text: 'You have been subscribed'
+include LandingPageHelper
+
+module LandingPage
+  describe "User" do
+    context "when he leaves a valid email" do
+      it "see a success message" do
+        subscribe_with 'Name', 'dummy@email.com'
+        expect(page).to have_selector '.lp-message.lp-message-success', text: 'You have been subscribed'
+      end
     end
-  end
-  context "when he leaves an invalid email" do
-    it "see an error message" do
-      visit "/landing_page/"
-      fill_in 'Email', with: 'not_valid_email'
-      click_button 'Subscribe'
-      expect(page).to have_selector '.lp-message.lp-message-error', text: 'The email is not valid'
+    context "when he leaves an invalid email" do
+      it "see an error message" do
+        subscribe_with 'Name', 'not_valid_email'
+        expect(page).to have_selector '.lp-message.lp-message-error', text: 'The email is not valid'
+      end
     end
-  end
-  context "when he leaves a repeated email" do
-    it "see an error message" do
-      FactoryGirl.create :user, email: 'dummy@email.com'
-      visit "/landing_page/"
-      fill_in 'Email', with: 'dummy@email.com'
-      click_button 'Subscribe'
-      expect(page).to have_selector '.lp-message.lp-message-error', text: 'The email has already been subscribed'
+    context "when he leaves a repeated email" do
+      it "see an error message" do
+        FactoryGirl.create :user, email: 'dummy@email.com'
+        subscribe_with 'Name', 'dummy@email.com'
+        expect(page).to have_selector '.lp-message.lp-message-error', text: 'The email has already been subscribed'
+      end
     end
   end
 end
