@@ -8,7 +8,7 @@ module LandingPage
       user = User.new(params[:user])
       if user.valid?
         user.save
-        flash.now[:success] = t('subscribed')
+        flash.now[:success] = t('landing_page.subscribed')
         render :new
       else
         @errors = user.errors

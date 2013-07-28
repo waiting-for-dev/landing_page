@@ -1,8 +1,9 @@
 en:
-  label_name: Name
-  placeholder_name: your name
-  label_email: Email
-  placeholder_email: your email
-  label_subscribe: Subscribe
-  subscribed: You have been subscribed
-  privacy_message: We never will send you spam
+  landing_page:
+    label_name: Name
+    placeholder_name: your name
+    label_email: Email
+    placeholder_email: your email
+    label_subscribe: Subscribe
+    subscribed: You have been subscribed
+    privacy_message: We never will send you spam
