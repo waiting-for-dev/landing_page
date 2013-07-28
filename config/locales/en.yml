@@ -1,9 +1,8 @@
 en:
-  name: Name
+  label_name: Name
   placeholder_name: your name
-  email: Email
+  label_email: Email
   placeholder_email: your email
-  subscribe: Subscribe
+  label_subscribe: Subscribe
   subscribed: You have been subscribed
-  subscription_error: The email is not valid
-  private: We never will send you spam
+  privacy_message: We never will send you spam

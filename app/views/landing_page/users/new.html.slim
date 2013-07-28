@@ -1,10 +1,10 @@
 = form_for :user, url: {action: :create}, html: { class: 'lp-form' } do |f|
-  = label_tag :user_name, t('name'), class: 'lp-label'
+  = label_tag :user_name, t('label_name'), class: 'lp-label'
   = f.text_field :name, class: 'lp-field', placeholder: t('placeholder_name')
-  = label_tag :user_email, t('email'), class: 'lp-label'
+  = label_tag :user_email, t('label_email'), class: 'lp-label'
   = f.text_field :email, class: 'lp-field', placeholder: t('placeholder_email')
-  = f.submit t('subscribe'), class: 'lp-button'
-  p.lp-note = t('private')
+  = f.submit t('label_subscribe'), class: 'lp-button'
+  p.lp-note = t('privacy_message')
 
 - if flash[:success]
   p.lp-message.lp-message-success = flash[:success]
