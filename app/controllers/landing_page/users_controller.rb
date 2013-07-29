@@ -1,6 +1,7 @@
 module LandingPage
   class UsersController < ApplicationController
     def new
+      @user = User.new
     end
 
     def create
@@ -11,7 +12,7 @@ module LandingPage
         flash.now[:success] = t('landing_page.subscribed')
         render :create
       else
-        @errors = user.errors
+        @user = user
         render :new
       end
     end

@@ -1,12 +1,12 @@
 = form_for :user, url: {action: :create}, html: { class: 'lp-form' } do |f|
   = label_tag :user_name, t('landing_page.label_name'), class: 'lp-label'
-  = f.text_field :name, class: 'lp-field', placeholder: t('landing_page.placeholder_name')
+  = f.text_field :name, class: 'lp-field', placeholder: t('landing_page.placeholder_name'), value: @user.name
   = label_tag :user_email, t('landing_page.label_email'), class: 'lp-label'
-  = f.text_field :email, class: 'lp-field', placeholder: t('landing_page.placeholder_email')
+  = f.text_field :email, class: 'lp-field', placeholder: t('landing_page.placeholder_email'), value: @user.email
   = f.submit t('landing_page.label_subscribe'), class: 'lp-button'
   p.lp-note = t('landing_page.privacy_message')
 
-- if defined? @errors
+- if @user.errors
   ul.lp-message.lp-message-error
-    - @errors.each do |attr, value|
+    - @user.errors.each do |attr, value|
       li = value
