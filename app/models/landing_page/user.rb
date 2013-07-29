@@ -1,10 +1,10 @@
 module LandingPage
   class User < ActiveRecord::Base
+    validates_presence_of :email
     validates_format_of :email,
       :with => /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/i,
       :message => 'The email is not valid'
-    validates_uniqueness_of :email,
-      :message => 'The email has already been subscribed'
+    validates_uniqueness_of :email
 
     after_save :add_to_campaign_monitor
 
