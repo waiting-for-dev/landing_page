@@ -8,5 +8,7 @@ en:
     subscribed: You have been subscribed
     privacy_message: We never will send you spam
     heading_share: Let your friends know about it!
-    share_facebook: Look at this!
-    share_twitter: Look at this! %{url}
+    facebook_description: Look at this!
+    twitter_description: Look at this! %{url}
+    pinterest_description: Look at this!
+    pinterest_image: http://www.publicdomainpictures.net/pictures/30000/nahled/pumpkin-friends.jpg
