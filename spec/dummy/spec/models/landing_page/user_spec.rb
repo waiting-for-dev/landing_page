@@ -17,5 +17,17 @@ module LandingPage
     it "has name attribute" do
       expect(User.new).to respond_to :name
     end
+    describe "after save" do
+      context "when campaign monitor is configured" do
+        it "add the email to campaign monitor" do
+          LandingPage.campaign_monitor_api_key = 'whatever'
+          LandingPage.campaign_monitor_list_id = 'whatever'
+          name = 'dummy name'
+          email = 'dummy@email.com'
+          CreateSend::Subscriber.should_receive(:add).with({api_key: LandingPage.campaign_monitor_api_key}, LandingPage.campaign_monitor_list_id, email, name, [], true).and_return(nil)
+          FactoryGirl.create :user, name: name, email: email
+        end
+      end
+    end
   end
 end
