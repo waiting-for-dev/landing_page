@@ -1,3 +1,5 @@
 = LandingPage
 
-This project rocks and uses MIT-LICENSE.
+Rails 4 engine for a landing page.
+
+Coming soon, before setember 2013.

@@ -7,13 +7,13 @@ require "landing_page/version"
 Gem::Specification.new do |s|
   s.name        = "landing_page"
   s.version     = LandingPage::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of LandingPage."
-  s.description = "TODO: Description of LandingPage."
+  s.authors     = ["Marc Busqué"]
+  s.email       = ["marc@lamarciana.com"]
+  s.homepage    = "https://github.com/laMarciana/landing_page"
+  s.summary     = "Rails 4 engine for a landing page"
+  s.description = "Coming soon, before setember 2013"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*", "COPYING.txt", "Rakefile", "README.rdoc"]
 
   s.add_dependency "rails", "~> 4.0.0"
   s.add_dependency "slim-rails", "~> 1.1"
