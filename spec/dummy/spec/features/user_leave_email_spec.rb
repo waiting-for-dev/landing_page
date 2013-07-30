@@ -20,7 +20,7 @@ module LandingPage
       it "see an error message" do
         FactoryGirl.create :user, email: 'dummy@email.com'
         subscribe_with 'Name', 'dummy@email.com'
-        expect(page).to have_selector '.lp-message.lp-message-error', text: 'The email has already been subscribed'
+        expect(page).to have_selector '.lp-message.lp-message-error', text: 'has already been taken'
       end
     end
   end
