@@ -12,7 +12,7 @@ module LandingPage
     private
     def add_to_campaign_monitor
       if LandingPage.campaign_monitor_api_key && LandingPage.campaign_monitor_list_id
-        CreateSend::Subscriber.add({api_key: LandingPage.campaign_monitor_api_key}, LandingPage.campaign_monitor_list_id, email, name, [], true)
+        CreateSend::Subscriber.add({api_key: LandingPage.campaign_monitor_api_key}, LandingPage.campaign_monitor_list_id, email, name, [{:Key => 'locale', :Value => locale}], true)
       end
     end
 

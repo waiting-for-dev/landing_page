@@ -36,7 +36,7 @@ module LandingPage
           LandingPage.campaign_monitor_list_id = 'whatever'
           name = 'dummy name'
           email = 'dummy@email.com'
-          CreateSend::Subscriber.should_receive(:add).with({api_key: LandingPage.campaign_monitor_api_key}, LandingPage.campaign_monitor_list_id, email, name, [], true).and_return(nil)
+          CreateSend::Subscriber.should_receive(:add).with({api_key: LandingPage.campaign_monitor_api_key}, LandingPage.campaign_monitor_list_id, email, name, [{:Key => 'locale', :Value => I18n.locale.to_s}], true).and_return(nil)
           FactoryGirl.create :user, name: name, email: email
         end
       end
