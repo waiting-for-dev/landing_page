@@ -43,4 +43,9 @@ RSpec.configure do |config|
   config.order = "random"
 
   config.before(:each, type: :controller) { @routes = LandingPage::Engine.routes }
+
+  config.before(:each) do
+    LandingPage.campaign_monitor_api_key = nil
+    LandingPage.campaign_monitor_list_id = nil
+  end
 end
