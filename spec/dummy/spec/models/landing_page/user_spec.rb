@@ -20,6 +20,9 @@ module LandingPage
     it "has name attribute" do
       expect(User.new).to respond_to :name
     end
+    it "has locale attribute" do
+      expect(User.new).to respond_to :locale
+    end
     describe "after save" do
       context "when campaign monitor is configured" do
         it "add the email to campaign monitor" do
