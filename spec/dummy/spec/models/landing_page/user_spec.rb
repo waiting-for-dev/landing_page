@@ -23,6 +23,12 @@ module LandingPage
     it "has locale attribute" do
       expect(User.new).to respond_to :locale
     end
+    describe "before save" do
+      it "set the locale attribute to the current locale" do
+        user = FactoryGirl.create :user
+        expect(user.locale).to eq I18n.locale.to_s
+      end
+    end
     describe "after save" do
       context "when campaign monitor is configured" do
         it "add the email to campaign monitor" do

@@ -6,6 +6,7 @@ module LandingPage
       :message => 'The email is not valid'
     validates_uniqueness_of :email
 
+    before_create :set_locale
     after_save :add_to_campaign_monitor
 
     private
@@ -13,6 +14,10 @@ module LandingPage
       if LandingPage.campaign_monitor_api_key && LandingPage.campaign_monitor_list_id
         CreateSend::Subscriber.add({api_key: LandingPage.campaign_monitor_api_key}, LandingPage.campaign_monitor_list_id, email, name, [], true)
       end
+    end
+
+    def set_locale
+      self.locale = I18n.locale.to_s
     end
   end
 end
