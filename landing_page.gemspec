@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/laMarciana/landing_page"
   s.summary     = "Rails 4 engine for a landing page"
   s.description = "Coming soon, before setember 2013"
+  s.license     = 'GPL3'
 
   s.files = Dir["{app,config,db,lib}/**/*", "COPYING.txt", "Rakefile", "README.rdoc"]
 
