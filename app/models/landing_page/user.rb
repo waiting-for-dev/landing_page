@@ -1,4 +1,5 @@
 module LandingPage
+  # A User who wants to be subscribed to the Landing Page
   class User < ActiveRecord::Base
     validates_presence_of :email
     validates_format_of :email,
@@ -6,7 +7,10 @@ module LandingPage
       :message => 'The email is not valid'
     validates_uniqueness_of :email
 
+    # Automaticly set the locale to the one used in the request
     before_create :set_locale
+
+    # If Campaign Monitor is configured, add the user to the corresponding list
     after_save :add_to_campaign_monitor
 
     private
