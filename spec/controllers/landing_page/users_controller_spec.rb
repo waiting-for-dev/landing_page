@@ -2,13 +2,13 @@ require 'spec_helper'
 
 module LandingPage
   describe UsersController do
-    describe "#create" do
-      describe "#new" do
-        it "assigns an user" do
-          get :new, use_route: 'landing_page'
-          expect(assigns[:user]).to be_instance_of LandingPage::User
-        end
+    describe "#new" do
+      it "assigns an user" do
+        get :new, use_route: 'landing_page'
+        expect(assigns[:user]).to be_instance_of LandingPage::User
       end
+    end
+    describe "#create" do
       context "when valid email is given" do
         before :each do
           post :create, use_route: 'landing_page', user: {email: 'valid@email.com'}
