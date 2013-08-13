@@ -18,9 +18,7 @@ There are some other rails landing page solutions out there, so here it is a qui
 
 ## Demo
 
-You can see how it externally works in:
-
-http://landing-page-demo.herokuapp.com/
+[Follow this link to see how it externally works](http://landing-page-demo.herokuapp.com/).
 
 ## Installation
 
@@ -33,8 +31,10 @@ http://landing-page-demo.herokuapp.com/
 
 You must add your [Campaign Monitor API key](http://help.campaignmonitor.com/topic.aspx?t=206) and your [list id](http://www.campaignmonitor.com/api/getting-started/#listid). So, in `config/application.rb` you can write something like:
 
-    LandingPage.campaign_monitor_api_key = 'your_api_key'
-    LandingPage.campaign_monitor_list_id = 'your_list_id'
+```ruby
+LandingPage.campaign_monitor_api_key = 'your_api_key'
+LandingPage.campaign_monitor_list_id = 'your_list_id'
+```
 
 If you want to use different credentials, for example, in  development environment, just use the same options but instead of `config/application.rb` put them in `config/environments/development.rb`.
 
@@ -53,26 +53,30 @@ Like any other rails engine, [you can override views creating them in your appli
 
 There are three views:
 
-* `landing_page/users/new.html.slim`: the subscription form
-* `landing_page/users/create.html.slim`: what is displayed when user submit successfully the form
-* `landing_page/users/_share_items.html.slim`: the share buttons showed by default. You can change them easily.
+* [`landing_page/users/new.html.slim`](app/views/landing_page/users/new.html.slim): the subscription form
+* [`landing_page/users/create.html.slim`](app/views/landing_page/users/create.html.): what is displayed when user submit successfully the form
+* [`landing_page/users/_share_items.html.slim`](app/views/landing_page/users/_share_items): the share buttons showed by default. You can change them easily.
 
 ### Texts
 Any text displayed is ready for localization under the namespace `landing_page`. For example, if you want to change the `Name` field label, you can put in your `config/locales/en.yml`:
 
-    en:
-      landing_page:
-        label_name: Your name
+```yaml
+en:
+  landing_page:
+    label_name: Your name
+```
 
 You can check all available keys in [`config/locales/en.yml`](config/locales/en.yml).
 
 ### CSS
-All HTML classes are prepended with `lp-`. You can check them in the view files.
+All HTML classes are prepended with `lp-`. You can check them in the [view files](app/views/landing_page/).
 
 An elegant way to style them if you use a CSS preprocessor (like SASS), it is just to extend your own classes. For example:
 
-    .lp-field
-      @extend .field
+```sass
+.lp-field
+  @extend .field
+```
 
 ## Release Policy
 landing_page follows the principles of [semantic versioning](http://semver.org/).
