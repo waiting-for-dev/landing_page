@@ -10,11 +10,12 @@ Gem::Specification.new do |s|
   s.authors     = ["Marc Busqué"]
   s.email       = ["marc@lamarciana.com"]
   s.homepage    = "https://github.com/laMarciana/landing_page"
-  s.summary     = "Rails 4 engine for a landing page"
-  s.description = "Coming soon, before setember 2013"
+  s.summary     = "Rails 4 engine for a landing page (email subscription form)"
+  s.description = "Minimal, flexible, unobstrusive rails 4 engine for an email subscription form. It collects name, email and locale used. Optional integration with Campaign Monitor. Ready for I18n."
   s.license     = 'GPL3'
 
   s.files = Dir["{app,config,db,lib}/**/*", "COPYING.txt", "Rakefile", "README.rdoc"]
+  s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", "~> 4.0.0"
   s.add_dependency "slim-rails", "~> 1.1"
