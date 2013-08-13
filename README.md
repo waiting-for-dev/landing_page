@@ -26,6 +26,7 @@ There are some other rails landing page solutions out there, so here it is a qui
 * Run `bundle install`
 * Run `rake landing_page:install:migrations`
 * Run `rake db:migrate`
+* Mount the routes in `config/routes.rb`. For example, `mount LandingPage::Engine, at: '/'`.
 
 ## Configuration of Campaign Monitor
 
