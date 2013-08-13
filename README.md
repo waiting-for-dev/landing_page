@@ -54,8 +54,8 @@ Like any other rails engine, [you can override views creating them in your appli
 There are three views:
 
 * [`landing_page/users/new.html.slim`](app/views/landing_page/users/new.html.slim): the subscription form
-* [`landing_page/users/create.html.slim`](app/views/landing_page/users/create.html.): what is displayed when user submit successfully the form
-* [`landing_page/users/_share_items.html.slim`](app/views/landing_page/users/_share_items): the share buttons showed by default. You can change them easily.
+* [`landing_page/users/create.html.slim`](app/views/landing_page/users/create.html.slim): what is displayed when user submit successfully the form
+* [`landing_page/users/_share_items.html.slim`](app/views/landing_page/users/_share_items.html.slim): the share buttons showed by default. You can change them easily.
 
 ### Texts
 Any text displayed is ready for localization under the namespace `landing_page`. For example, if you want to change the `Name` field label, you can put in your `config/locales/en.yml`:
