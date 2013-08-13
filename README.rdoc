@@ -1,5 +1,0 @@
-= LandingPage
-
-Rails 4 engine for a landing page.
-
-Coming soon, before setember 2013.
