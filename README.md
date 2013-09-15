@@ -21,7 +21,7 @@ There are some other rails landing page solutions out there, so here it is a qui
 
 ## Installation
 
-* Add to your Gemfile: `gem 'landing_page', '~> 1.0'`
+* Add to your Gemfile: `gem 'landing_page', '~> 0.1'`
 * Run `bundle install`
 * Run `rake landing_page:install:migrations`
 * Run `rake db:migrate`
