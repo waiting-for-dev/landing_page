@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = LandingPage::VERSION
   s.authors     = ["Marc Busqué"]
   s.email       = ["marc@lamarciana.com"]
-  s.homepage    = "https://github.com/laMarciana/landing_page"
-  s.summary     = "Rails 4 engine for a landing page (email subscription form)"
-  s.description = "Minimal, flexible, unobstrusive rails 4 engine for an email subscription form. It collects name, email and locale used. Optional integration with Campaign Monitor. Ready for I18n."
+  s.homepage    = "https://github.com/laMarciana/landing_page/tree/rails_3.2"
+  s.summary     = "Rails 3.2 engine for a landing page (email subscription form)"
+  s.description = "Minimal, flexible, unobstrusive rails 3 engine for an email subscription form. It collects name, email and locale used. Optional integration with Campaign Monitor. Ready for I18n."
   s.license     = 'GPL3'
 
   s.files = Dir["{app,config,db,lib}/**/*", "COPYING.txt", "Rakefile", "README.rdoc"]

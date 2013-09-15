@@ -1,10 +1,9 @@
 # LandingPage
 
-Rails 4 engine to add a subscription by email form to an application.
+Rails 3.2 engine to add a subscription by email form to an application.
 
 There are some other rails landing page solutions out there, so here it is a quick list of what this one offers:
 
-* For Rails 4.
 * An engine, so it is mountable into your own application.
 * Do not come with any CSS. You have to create it according to your custom design needs.
 * Collects optional name and mandatory email.

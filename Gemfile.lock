@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    landing_page (1.0.2)
+    landing_page (0.1.0)
       createsend (~> 3.4)
       rails (~> 3.2)
       slim-rails (~> 1.1)
