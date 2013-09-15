@@ -16,6 +16,11 @@ There are some other rails landing page solutions out there, so here it is a qui
 * HTML5 semantic mark-up
 * Very easy to override or customize to custom needs.
 
+
+## Rails 3.2 version
+
+To use this gem for rails 3.2, use versions higher than 0.1 and lower than 1.0. You can find last rails 3.2 version in [rails_3.2 repository branch](https://github.com/laMarciana/landing_page/tree/rails_3.2).
+
 ## Demo
 
 [Follow this link to see how it externally works](http://landing-page-demo.herokuapp.com/).
