@@ -8,7 +8,6 @@ module LandingPage
 
     # Register a new user or show errors
     def create
-      params.require(:user).permit!
       user = User.new(params[:user])
       if user.valid?
         user.save

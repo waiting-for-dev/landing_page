@@ -1,6 +1,8 @@
 module LandingPage
   # A User who wants to be subscribed to the Landing Page
   class User < ActiveRecord::Base
+    attr_accessible :name, :email, :locale
+
     validates_presence_of :email
     validates_format_of :email,
       :with => /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/i,
