@@ -1,7 +1,7 @@
 require 'spec_helper' 
 
 module LandingPage
-  describe UsersController do
+  describe UsersController, type: :controller do
     describe "#new" do
       it "assigns an user" do
         get :new, use_route: 'landing_page'

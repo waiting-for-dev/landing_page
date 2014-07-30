@@ -3,7 +3,7 @@ require 'spec_helper'
 include LandingPageHelper
 
 module LandingPage
-  describe "User" do
+  describe "User", type: :feature do
     context "when he leaves a valid email" do
       it "see a success message" do
         subscribe_with 'Name', 'dummy@email.com'
