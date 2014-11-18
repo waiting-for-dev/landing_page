@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = LandingPage::VERSION
   s.authors     = ["Marc Busqué"]
   s.email       = ["marc@lamarciana.com"]
-  s.homepage    = "https://github.com/laMarciana/landing_page"
+  s.homepage    = "https://github.com/waiting-for-dev/landing_page"
   s.summary     = "Rails 4 engine for a landing page (email subscription form)"
   s.description = "Minimal, flexible, unobstrusive rails 4 engine for an email subscription form. It collects name, email and locale used. Optional integration with Campaign Monitor. Ready for I18n."
   s.license     = 'GPL3'
